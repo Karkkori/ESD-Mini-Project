@@ -9,10 +9,16 @@ import hike
 app = Flask(__name__)
 hdb = db.HubDatabase()
 
+
+## Remove this when using the database
+test_data = [{'session_id': 1, 'km': '33', 'steps': '35', 'burnt_kcal': '55'},
+            {'session_id': 2, 'km': '433', 'steps': '435', 'burnt_kcal': '555'},
+]
+
 @app.route('/')
 def get_home():
     sessions = hdb.get_sessions() 
-    return render_template('home.html', sessions=sessions)
+    return render_template('home.html', sessions=test_data)
 
 @app.route('/sessions')
 def get_sessions():
