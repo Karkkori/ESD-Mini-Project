@@ -19,4 +19,4 @@ source .venv/bin/activate
 
 
 ## License
-the MIT License. See the [LICENSE](LICENSE) file for more details.
+MIT License. See the [https://opensource.org/license/mit](LICENSE) file for more details.
