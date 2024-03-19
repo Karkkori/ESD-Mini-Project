@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HikeIt</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/cover.png'); /* Background image */
+            background-size: cover; /* Scale the image to cover the entire window */
+            background-position: center;
+            background-repeat: no-repeat; /* Do not repeat the background image */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        /* Container styles */
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(256, 256, 256, 0.7); /* Light yellow-green color */
+            border-radius: 8px; /* Rounded corners for better appearance */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Darker box shadow for depth */
+            max-width: 700px; /* Increased max-width */
+            width: calc(100% - 40px); /* Adjusted width */
+        }
+        
+        /* Header styles */
+        h1 {
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: #6b8e23; /* Dark olive-green color */
+            text-align: center;
+        }
+        
+        /* Latest session styles */
+        .latest-session {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .latest-session h2 {
+            margin-top: 0;
+            font-size: 26px; /* Increased font size */
+            color: #6b8e23; /* Dark olive-green color */
+        }
+        
+        .latest-session p {
+            margin: 15px 0; /* Increased margin */
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Button styles */
+        button {
+            padding: 10px 20px;
+            background-color: #6b8e23; /* Dark olive-green color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #556b2f; /* Darker olive-green color on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>HikeIt</h1> <!-- Changed header text to HikeIt -->
+
+    <div class="latest-session">
+        <h2>Latest Session</h2>
+        <p id="latest-steps"></p>
+        <p id="latest-distance"></p>
+        <p id="latest-calories"></p>
+    </div>
+    
+    <button onclick="updateData()">Update Data</button>
+</div>
+
+<script>
+    function updateData() {
+        fetch('/sessions')  // Endpoint defined in Flask app
+            .then(response => response.json())
+            .then(data => {
+                const latestSession = data[data.length - 1];
+                document.getElementById('latest-steps').textContent = `Steps: ${latestSession[2]}`;
+                document.getElementById('latest-distance').textContent = `Distance: ${parseFloat(latestSession[1]).toFixed(2)} km`;
+                document.getElementById('latest-calories').textContent = `Calories Burned: ${parseFloat(latestSession[3]).toFixed(2)} Calories`;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }
+
+    // Load data once the website is opened
+    updateData();
+</script>
+
+</body>
+</html>
