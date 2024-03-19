@@ -10,6 +10,11 @@ After installing the git, move to the folder in which you want to clone the resp
 ```
 git clone https://github.com/Karkkori/ESD-Mini-Project.git
 ```
+## Setting up the environment
+
+To program the Lilygo smartwac
+
+
 ## Installation
 To install this project, install dependencies via terminal:
 ```
