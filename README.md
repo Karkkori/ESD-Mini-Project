@@ -10,13 +10,13 @@ After installing the git, move to the folder in which you want to clone the resp
 ```
 git clone https://github.com/Karkkori/ESD-Mini-Project.git
 ```
-## Setting up the environment
+## Setting up the LILYGO watch programming environment
 
 For LILYGO watch programming, we recommed using VS Code with Platform IO extension. \
 The Platform IO environment and project can be established following the instuctions in this video:\
-https://www.youtube.com/watch?v=wUGADCnerCs 
-
-## Installation
+https://www.youtube.com/watch?v=wUGADCnerCs \
+The Watch_TTGo_fw folder includes all the required libraries and dependencies. The watch is programmed by editing the main.cpp file found in the src-folder.
+## Installing dependencies for RPi
 To install this project, install dependencies via terminal:
 ```
 pip install -r requirements.txt
