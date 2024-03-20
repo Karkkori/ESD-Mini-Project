@@ -1,7 +1,7 @@
 # ESD Mini Project
 
 ## Introduction
-This project integrates a Lilygo smartwatch with a Raspberry Pi to track and visualize hiking activities through a user-friendly Flask web application. By leveraging Bluetooth for data transmission, it captures real-time steps, calories burned, and distance traveled. The result is a comprehensive dashboard that offers hikers insightful visualizations of their performance, enhancing their outdoor experiences with technology. The Lilygo smartwatch software and all the included files are found inside the Watch_TTGo_fw and the Raspberry Pi software and related files can be found inside teh Rpi folder.
+This project integrates a Lilygo smartwatch with a Raspberry Pi to track and visualize hiking activities through a user-friendly Flask web application. The LILYGO watch captures real-time steps and traveled distance which are synchronized to the Rasberry Pi webserver utilizing the Bluetooth low energy connection. The webserver provides a web user interface that offers hikers insightful visualizations of their performance, showing the step count, traveled distance and burnt calories. The Lilygo smartwatch software and all the included files are found inside the Watch_TTGo_fw, and the Raspberry Pi software and related files can be found inside teh Rpi folder.
 
 ## Cloning the repository
 
