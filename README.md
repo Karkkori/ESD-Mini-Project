@@ -23,7 +23,7 @@ To program and run the software in RPi, we recommend using the virtual environme
 After moving to the project folder, the virtual environment can be established by running the following code via terminal:
 ```
 source .venv/bin/activate
-./start_app.sh
+
 ```
 ## Installing dependencies for RPi
 Dependencies for this project can be installed via terminal:
@@ -34,4 +34,11 @@ If there are challenges installing pybluez library using the requirements.txt, r
 ```
 pip install git+https://github.com/pybluez/pybluez.git#egg=pybluez
 ```
+
+## Running the RPi software
+To run the the data receiver and webserver simultaneously, run the following command via terminal:
+```
+./start_app.sh
+```
+This command runs the start_app.sh which operates the receiver.py and wserver.py the same time providing the full webserver functionality.
 
