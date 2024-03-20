@@ -19,22 +19,19 @@ The Watch_TTGo_fw folder includes all the required libraries and dependencies, a
 
 
 ## Setting up the RPi 
-To program and run the software in RPi, we recommend using the virtual environment.\
+To program and run the software in RPi, we recommend using the virtual environment.
 After moving to the project folder, the virtual environment can be established by running the following code via terminal:
 ```
 source .venv/bin/activate
 ./start_app.sh
 ```
 ## Installing dependencies for RPi
-To install this project, install dependencies via terminal:
+Dependencies for this project can be installed via terminal:
 ```
 pip install -r requirements.txt
 ```
-If there are challenges installing pybluez library using the requirements.txt, run the following command in the terminal window:
+If there are challenges installing pybluez library using the requirements.txt, run the following command in the terminal window in the virtual environment:
 ```
 pip install git+https://github.com/pybluez/pybluez.git#egg=pybluez
 ```
 
-
-## License
-MIT License. See the [LICENSE](https://opensource.org/license/mit) file for more details.
