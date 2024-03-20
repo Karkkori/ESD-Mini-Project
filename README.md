@@ -16,7 +16,8 @@ For LILYGO watch programming, we recommed using VS Code with Platform IO extensi
 The Platform IO environment and project can be established following the instuctions in this video:\
 https://www.youtube.com/watch?v=wUGADCnerCs \
 The Watch_TTGo_fw folder includes all the required libraries and dependencies, and the watch can be programmed by modifying the main.cpp file in the src-folder.
-The code can be uploaded to the watch by following the instuctions in the video linked above. For further support in LILYGO watch programming we recommend to check the LILYGO Watch libary, https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library.
+The code can be uploaded to the watch by following the instuctions in the video linked above. \
+For further support in LILYGO watch programming we recommend to check the LILYGO Watch libary, https://github.com/Xinyuan-LilyGO/TTGO_TWatch_Library.
 
 ## Setting up the RPi 
 To program and run the software in RPi, we recommend using the virtual environment.
