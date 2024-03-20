@@ -5,15 +5,16 @@ This project integrates a Lilygo smartwatch with a Raspberry Pi to track and vis
 
 ## Cloning the repository
 
-To clone the repository, install the git following these instructions: https://github.com/git-guides/install-git \.
+To clone the repository, install the git following these instructions: https://github.com/git-guides/install-git. \
 After installing the git, move to the folder in which you want to clone the respository and run the following command via terminal:
 ```
 git clone https://github.com/Karkkori/ESD-Mini-Project.git
 ```
 ## Setting up the environment
 
-To program the Lilygo smartwac
-
+For LILYGO watch programming, we recommed using VS Code with Platform IO extension. \
+The Platform IO environment and project can be established following the instuctions in this video:\
+https://www.youtube.com/watch?v=wUGADCnerCs 
 
 ## Installation
 To install this project, install dependencies via terminal:
